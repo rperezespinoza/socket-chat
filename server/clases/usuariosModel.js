@@ -6,6 +6,10 @@ class UsuariosModel {
 
     agregarPersonas(id, nombre, sala) {
 
+        console.log(this.personas.filter(p => p.nombre === nombre).length);
+
+        //if (this.personas.filter(p => p.nombre === nombre).length == 0) {
+
         let persona = {
             id,
             nombre,
@@ -13,6 +17,7 @@ class UsuariosModel {
         };
 
         this.personas.push(persona);
+        //}
 
         return this.personas;
     }
